@@ -5,7 +5,16 @@ const App = () => {
   const [characters, setCharacters] = useState([])
 
   useEffect (()=> {
-    console.log("effect once")
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://hp-api.onrender.com/api/characters')
+        const data = await response.json()
+        console.log(data);  
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchData()
   }, [])
 
   return (
