@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Cards from './components/Cards'
+import './styles/app.css'
 
 const App = () => {
   const [characters, setCharacters] = useState([])
