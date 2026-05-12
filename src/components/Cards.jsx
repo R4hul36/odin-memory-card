@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card';
+import '../styles/cards.css'
 
 const Cards = ({characters}) => {
   console.log(characters);
