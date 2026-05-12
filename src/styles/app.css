@@ -5,5 +5,13 @@
 }
 
 body {
-    font-family: helvetica;
+    font-family: "Macondo", sans-serif;
+    font-optical-sizing: auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+    font-style: normal;
 }

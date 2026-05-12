@@ -26,7 +26,10 @@ const App = () => {
   }, [])
 
   return (
+    <>
+    <h1>Harry Potter Memory Game</h1>
     <Cards characters = {characters}/>
+    </>
   )
 }
 
