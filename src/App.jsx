@@ -1,11 +1,17 @@
 import { useEffect, useState } from 'react'
 import Cards from './components/Cards'
 import './styles/app.css'
+import shuffleCards from './helpers/shuffleCards'
 
 const App = () => {
   const [characters, setCharacters] = useState([])
 
   const charaNames = []
+
+  const handleClick = () => {
+    let shuffledCharacters = shuffleCards(characters)
+    setCharacters(shuffledCharacters)
+  }
 
   useEffect (()=> {
     const fetchData = async () => {
@@ -28,7 +34,7 @@ const App = () => {
   return (
     <>
     <h1>Harry Potter Memory Game</h1>
-    <Cards characters = {characters}/>
+    <Cards characters = {characters} onCardClick = {handleClick}/>
     </>
   )
 }
