@@ -31,7 +31,7 @@ const App = () => {
       try {
         const response = await fetch('https://hp-api.onrender.com/api/characters')
         const data = await response.json()
-        const requiredData = data.slice(0,16).map(character => {
+        const requiredData = data.slice(0,12).map(character => {
           const {name, image} = character
           return {name, image}
         })
@@ -48,7 +48,7 @@ const App = () => {
     <>
     <h1>Harry Potter Memory Game</h1>
     <div className="game-container">
-      <div className='score-container'>Score: {score}</div>
+      <div className='score-container'><p>Score: {score}</p></div>
       <Cards characters = {characters} onCardClick = {handleClick}/>
     </div>
     </>

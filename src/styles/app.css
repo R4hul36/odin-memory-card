@@ -7,6 +7,7 @@
 body {
     font-family: "Macondo", sans-serif;
     font-optical-sizing: auto;
+    background-color: blanchedalmond;
 }
 
 h1 {
@@ -17,5 +18,18 @@ h1 {
 }
 
 .game-container {
-   
+   width: 80vw;
+   margin: 4rem auto;
+   display: flex;
+   flex-direction: row;
+   gap: 2rem;
+   /* background-color: bisque; */
+   padding: 3rem 0
+}
+.score-container {
+    width: 8rem
+}
+
+.score-container p {
+    margin-left: 2rem;
 }

@@ -1,14 +1,21 @@
 
 .card {
     text-align: center;
-    font-size: 1.8rem;
-    padding: 1rem;
+    font-size:  1.2rem;
+    padding: 0.5rem;
     background-color: brown;
     color: white;
     border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .card img {
-    width: 16rem;
-    height: 21rem;
+    width: 11rem;
+    height: 14rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
