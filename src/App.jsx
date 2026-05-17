@@ -10,9 +10,18 @@ const App = () => {
 
   const charaNames = []
 
-  const handleClick = () => {
+  const handleClick = (name) => {
     // after clicking a card check if the remembered cards array already has the same character, if so set score to zero and set remembered cards to empty array
     //else increment the score by 100 and add the current character to the remembered array
+    if(rememberedCards.includes(name)){
+      setScore(0)
+      setRememberedCards([])
+      return
+    }
+
+    setScore(prevScore => prevScore+=100)
+    setRememberedCards(prevCards => [...prevCards, name])
+
     let shuffledCharacters = shuffleCards(characters)
     setCharacters(shuffledCharacters)
   }

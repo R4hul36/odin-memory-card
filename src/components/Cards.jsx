@@ -8,7 +8,7 @@ const Cards = ({characters, onCardClick}) => {
   return (
     <div className='cards'>
       {characters.map(character => {
-        return <div className="card" key={character.name} onClick={onCardClick}>
+        return <div className="card" key={character.name} onClick={()=> onCardClick(character.name)}>
           <Card character = {character} />
         </div>
       })}
